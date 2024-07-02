@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <style>
+        .img {
+            height: 180px;
+            width: 180px;
+            margin-left: 44%;
+            margin-top: 1%;
+        }
+
+       
+
+        .mail {
+            height: 35px;
+            width: 350px;
+            border: 1px solid rgb(175, 175, 175);
+            border-radius: 5px;
+            margin-left: 38%;
+        }
+
+        .pass {
+            height: 35px;
+            width: 350px;
+            border: 1px solid rgb(175, 175, 175);
+            border-radius: 5px;
+            margin-left: 38%;
+            margin-top: 1%;
+        }
+
+        h1 {
+            font-size: 33px;
+            font-weight: 500;
+            color: black;
+            font-family: "Roboto", sans-serif;
+            margin-top: -4%;
+            margin-left: 46.5%
+        }
+
+        .pag {
+            font-size: 20px;
+            margin-top: -1%;
+            margin-left: 42.5%
+        }
+
+        h2 {
+            font-size: 25px;
+            color: rgb(55, 55, 253);
+            margin-top: 1%;
+            margin-left: 36.5%
+        }
+
+        .che {
+            margin-left: 38%;
+            margin-top: 15px;
+        }
+
+        .che p {
+            color: black;
+            font-size: 14px;
+            margin-left: 3%;
+            margin-top: -20px;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .che h6 {
+            font-size: 14px;
+            margin-left: 240px;
+            margin-top: -31px;
+            color: black;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .but {
+            height: 30px;
+            width: 125px;
+            border-radius: 5px;
+            margin-left: 47%;
+
+        }
+
+        .log {
+            font-size: 15px;
+            color: black;
+            height: 30px;
+            width: 125px;
+            border-radius: 5px;
+        }
+    </style>
+    <div>
+        <img src="gog.png" class="img">
+    </div>
+    <div class="red">
+        <h1>Sign in</h1>
+        <p class="pag">with your Google Account. </p>
+        <h2>Learn More about using your account</h2>
+        <div>
+            <input type="text" placeholder=" Enter Email" class=mail id="email"><br>
+            <input type="text" placeholder="Password" class="pass" id="passs"><br>
+            <p id="demo"></p>
+        </div>
+        <div class="che">
+            <input type="checkbox">
+            <p>Remember me</p>
+            <h6>Forget Password?</h6>
+        </div>
+        <div>
+            <button onclick="submit()" class="but">Login</button>
+        </div>
+    </div>
+
+
+    <script>
+        function submit() {
+            let val = document.getElementById('email').value;
+            console.log(val);
+            let pas = document.getElementById('passs').value;
+            console.log(pas);
+            let demo = document.getElementById('demo');
+           // let butt = document.getElementsByClassName('but')[0];
+            // if(butt){
+            //     butt.innerHTML='<a href="1stjune.html" class="log">login</a>'
+            // }
+            if (val == '' || pas == '') {
+                window.alert("Please enter both email and password.");
+                return;
+            }
+            if (val == 'singhalvansh74@gmail.com' && pas == 'vansh@123') {
+                // alert("Login successful!");
+                // Redirect to another page
+                window.location.href = "clone.html";
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+            document.getElementById('email').value="";
+            document.getElementById('passs').value="";
+
+
+        }
+    </script>
+</body>
+
+</html>
